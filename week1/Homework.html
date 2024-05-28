@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather forecast</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: #1a64d6;
+        font-size: 40px;
+      }
+      .current-temp {
+        text-align: center;
+        font-size: 36px;
+      }
+      button {
+        display: block;
+        padding: 16px;
+        border-radius: 26px;
+        border: 1px solid;
+        background-color: #1a64d6;
+        margin: 0 auto;
+        color: #fffbef;
+        transition: all 200ms ease-in-out;
+        font-size: 16px;
+      }
+      button:hover {
+        background-color: #fffbef;
+        cursor: pointer;
+        color: #1a64d6;
+      }
+      ul {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+        margin: 20px;
+        font-size: 30px;
+      }
+      li {
+        margin: 50px;
+      }
+      li:hover {
+        background-color: #fffbef;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      p {
+        text-align: center;
+      }
+      body {
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      .temperature-number {
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      ⛅️
+      <br />
+      Currently 21° in Tokyo
+    </h1>
+    <div class="temperature-number current-temp">
+      13° / <span class="bold">23°</span>
+    </div>
+    <ul>
+      <li>
+        <span class="bold">🌧Tomorrow</span>
+        <br />
+        <span class="temperature-number"
+          >10° / <span class="temperature-number bold">22°</span></span
+        >
+      </li>
+      <li>
+        <span class="bold">🌥Saturday</span>
+        <br />
+        <span class="temperature-number"
+          >15° / <span class="temperature-number bold">17°</span></span
+        >
+      </li>
+      <li>
+        <span class="bold">☀️Sunday</span>
+        <br />
+        <span class="temperature-number"
+          >25° / <span class="temperature-number bold">28°</span></span
+        >
+      </li>
+    </ul>
+    <button>Change city</button>
+    <p>Coded by Tatiana Dioniseva</p>
+  </body>
+</html>
