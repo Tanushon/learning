@@ -64,25 +64,55 @@
         <strong> Limited amount of spots! </strong>
       </p>
       <br />
-      <button>Apply Now</button>
+      <button onclick="init()">Apply Now</button>
     </section>
     <script>
-      let time = prompt(
-        "What is the current hour? (For americans - `military time`)"
-      );
-      if (time > 24) {
-        alert("Error");
-      } else {
+      function getText(time) {
+        if (time > 24) {
+          return "Error";
+        }
         if (time < 12) {
-          alert("Good morning!");
-        } else {
-          if (time > 18) {
-            alert("Good evening!");
-          } else {
-            alert("Good afternoon!");
-          }
+          return "Good morning!";
+        }
+        if (time >= 18 && time <= 21) {
+          return "Good evening!";
+        }
+        if (time >= 22) {
+          return "Good night!";
+        }
+        if (time >= 12 && time < 18) {
+          return "Good afternoon!";
         }
       }
+
+      function init() {
+        let time = prompt(
+          "What is the current hour? (For americans - `military time`)"
+        );
+
+        let text = getText(time);
+        alert(text);
+      }
+
+      function test(time, expectedString) {
+        let text = getText(time);
+        if (text !== expectedString) {
+          console.error("Unexpected output: Time ", time, expectedString, text);
+        } else {
+          console.log("All good", time);
+        }
+      }
+
+      // test my getTextFunction
+      test(0, "Good morning!");
+      test(11, "Good morning!");
+      test(12, "Good afternoon!");
+      test(14, "Good afternoon!");
+      test(18, "Good evening!");
+      test(21, "Good evening!");
+      test(24, "Good night!");
+      test(25, "Error");
+      test(22, "Good night!");
     </script>
   </body>
 </html>
