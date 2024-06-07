@@ -7,7 +7,7 @@
   </head>
   <style>
     html {
-      height: 200%;
+      height: 100%;
     }
     body {
       font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
@@ -55,24 +55,57 @@
     p {
       text-align: center;
       color: #45171d;
+      font-weight: bold;
     }
     img {
       display: block;
-      width: 100;
+      width: 400px;
       margin: 0 auto;
+    }
+    div {
+      text-align: center;
+      padding: 0;
+    }
+    span {
+      padding: 6px;
     }
   </style>
   <body>
     <h1>Dogs are the best</h1>
-    <h2>Specifically corgis</h2>
+    <h2>Especially corgis</h2>
+    <div>
+      <span
+        ><a
+          href="https://giphy.com/explore/corgi"
+          style="color: rgb(157, 37, 3)"
+          >Corgi Gifs</a
+        ></span
+      >
+      <span
+        ><a
+          href="https://en.wikipedia.org/wiki/Welsh_Corgi"
+          style="color: rgb(157, 37, 3)"
+          >Wiki</a
+        ></span
+      >
+      <span>
+        <a
+          href="https://www.akc.org/expert-advice/lifestyle/fun-facts-about-the-pembroke-welsh-corgi"
+          style="color: rgb(157, 37, 3)"
+          >AKC</a
+        >
+      </span>
+    </div>
     <hr />
     <img
       src="https://tanushon.github.io/learning/week3/Augusta.jpg"
       alt="404 woof"
     />
+    <hr />
     <p>
-      Corgi, a.k.a. "Dwarf Dog" - In Welsh, “cor” means “dwarf” while “gi” is a
-      form of the word “dog,” so their name literally translates to "dwarf dog".
+      <em>Corgi</em>, a.k.a. "Dwarf Dog" - In Welsh, “cor” means “dwarf” while
+      “gi” is a form of the word “dog,” so their name literally translates to
+      "dwarf dog".
       <br />
       Legend has it that fairies and elves once used corgis to pull their
       coaches and act as fairy cattle herders.
@@ -83,7 +116,7 @@
     </p>
     <!-- For local development -->
     <!-- src="./Augusta.jpg" -->
-    <button><strong>Press me</strong></button>
+    <button><strong>Boop me</strong></button>
     <script>
       function question() {
         let animal = prompt(`What's your favourite pet?`);
