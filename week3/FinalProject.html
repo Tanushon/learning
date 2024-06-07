@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dogs</title>
+  </head>
+  <style>
+    html {
+      height: 100%;
+    }
+    body {
+      font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
+      background: linear-gradient(
+        180deg,
+        rgb(241, 241, 176) 0%,
+        rgb(223, 133, 67) 100%
+      );
+    }
+    section {
+      margin: 120px 0;
+    }
+    h1 {
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 48px;
+      margin: 0;
+      text-align: center;
+      color: #45171d;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 48px;
+      margin: 0;
+      text-align: center;
+      color: #45171d;
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px;
+      border: #45171d 1px solid;
+      border-radius: 20px;
+      box-shadow: rgb(157, 37, 3);
+      transition: all 0.5s ease-in-out;
+      font-size: 16px;
+      background: rgb(241, 241, 176);
+    }
+    button:hover {
+      background-color: rgb(157, 37, 3);
+      cursor: pointer;
+      color: #45171d;
+    }
+    p {
+      text-align: center;
+      color: #45171d;
+    }
+  </style>
+  <body>
+    <h1>Dogs are the best</h1>
+    <h2>Specifically corgis</h2>
+    <br />
+    <p>
+      <strong>The Welsh Corgi</strong> is a small type of herding dog that
+      originated in Wales. The name corgi is derived from the Welsh words cor
+      and ci, meaning "dwarf" and "dog", respectively. Welsh Corgis were cattle
+      herding dogs, the type of herding dog referred to as "heelers", meaning
+      that they would nip at the heels of the larger animals to keep them on the
+      move.
+    </p>
+    <img src="./Augusta.jpg" alt="404 woof">
+    <button><strong>Press me</strong></button>
+    <script>
+      function question() {
+        let animal = prompt(`What's your favourite pet?`);
+        if (animal == "dog") {
+          alert(`Good choice!`);
+        } else {
+          alert(`Sorry, poor answer, try again.`);
+        }
+      }
+      let contactButton = document.querySelector("button");
+      contactButton.addEventListener("click", question);
+    </script>
+  </body>
+</html>
